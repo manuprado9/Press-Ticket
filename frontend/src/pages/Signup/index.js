@@ -30,7 +30,7 @@ import toastError from "../../errors/toastError";
 
 import { system } from "../../config.json";
 import logo from '../../assets/logo.png';
-import background from '../../assets/fondo.jpg';
+import background from '../../assets/background.jpg';
 
 const Copyright = () => {
 	return (

@@ -1,37 +1,37 @@
-### download & setup
+### Descarga y Instalar
 
-Firstly, you need to download it:
+En primer lugar, debe descargarlo:
 
 
 ```bash
 sudo apt -y update && apt -y upgrade
 sudo apt install -y git
-git clone https://github.com/manuprado9/whaticket-installer.git
+git clone https://github.com/manuprado9/Press-Ticket-Installer.git
 ```
 
-Now, all you gotta do is making it executable:
+Ahora, todo lo que tienes que hacer es hacerlo ejecutable:
 
 ```bash
-sudo chmod +x ./whaticket-installer/whaticket
+sudo chmod +x ./Press-Ticket-Installer/Press-Ticket
 ```
 
-### usage
+### Uso
 
-After downloading and making it executable, you need to **navigate into** the installer directory and **run the script with sudo**:
+Después de descargarlo y hacerlo ejecutable, debe ir al directorio del instalador y **ejecutar el script** con **SUDO**:
 
 ```bash
-cd ./whaticket-installer
+cd ./Press-Ticket-Installer
 ```
 
 ```bash
-sudo ./whaticket
+sudo ./Press-Ticket
 ```
 
-* User: 
+* Usuario: 
 ```bash
 admin@pressticket.com.br  
 ```
-* Password: 
+* Contraseña: 
 ```bash
 admin
 ```

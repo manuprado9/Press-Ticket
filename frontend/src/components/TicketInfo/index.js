@@ -16,7 +16,7 @@ const TicketInfo = ({ contact, ticket, onClick }) => {
 			subheader={
 				ticket.user &&
 				`${i18n.t("messagesList.header.assignedTo")} ${ticket.user.name} 
-				${ticket.queue ? ' | Setor: ' + ticket.queue.name : ' | Setor: Nenhum'}`
+				${ticket.queue ? ' | Sector: ' + ticket.queue.name : ' | Sector: Ninguno'}`
 			}
 		/>
 	);

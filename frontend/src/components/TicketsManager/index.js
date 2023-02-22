@@ -21,7 +21,7 @@ import {
 import NewTicketModal from "../NewTicketModal";
 import TicketsList from "../TicketsList";
 import TabPanel from "../TabPanel";
-import { TagsFilter } from "../TagsFilter";
+//import { TagsFilter } from "../TagsFilter";
 import { Can } from "../Can";
 import TicketsQueueSelect from "../TicketsQueueSelect";
 
@@ -115,7 +115,6 @@ const TicketsManager = () => {
 
   const [, setOpenCount] = useState(0);
   const [pendingCount, setPendingCount] = useState(0);
-  const [selectedTags, setSelectedTags] = useState([]);
 
   const userQueueIds = user.queues.map((q) => q.id);
   const [selectedQueueIds, setSelectedQueueIds] = useState(userQueueIds || []);
@@ -139,11 +138,6 @@ const TicketsManager = () => {
     }
 
   };
-
-  const handleSelectedTags = (selecteds) => {
-    const tags = selecteds.map(t => t.id);
-    setSelectedTags(tags);
-  }
 
   const handleChangeTab = (e, newValue) => {
     setTab(newValue);
@@ -246,8 +240,7 @@ const TicketsManager = () => {
         />
       </Paper>
       <TabPanel value={tab} name="open" className={classes.ticketsWrapper}>
-      <TagsFilter onFiltered={handleSelectedTags} />
-        <Paper className={classes.ticketsWrapper}>
+        <Paper className={classes.ticketsWrapper}> 
           <TicketsList
             status="open"
             showAll={showAllTickets}
@@ -264,7 +257,6 @@ const TicketsManager = () => {
       </TabPanel>
 
       <TabPanel value={tab} name="pending" className={classes.ticketsWrapper}>
-      <TagsFilter onFiltered={handleSelectedTags} />
         <TicketsList
           status="pending"
           showAll={true}
@@ -275,7 +267,6 @@ const TicketsManager = () => {
 
 
       <TabPanel value={tab} name="closed" className={classes.ticketsWrapper}>
-      <TagsFilter onFiltered={handleSelectedTags} />
         <TicketsList
           status="closed"
           showAll={true}
@@ -283,10 +274,8 @@ const TicketsManager = () => {
         />
       </TabPanel>
       <TabPanel value={tab} name="search" className={classes.ticketsWrapper}>
-      <TagsFilter onFiltered={handleSelectedTags} />
         <TicketsList
           searchParam={searchParam}
-          tags={selectedTags}
           showAll={true}
           selectedQueueIds={selectedQueueIds}
         />

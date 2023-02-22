@@ -16,7 +16,6 @@ import {
   Code,
   ContactPhoneOutlined,
   DashboardOutlined,
-  LocalOffer,
   MenuBook,
   PeopleAltOutlined,
   QuestionAnswerOutlined,
@@ -118,11 +117,6 @@ const MainListItems = (props) => {
         to="/quickAnswers"
         primary={i18n.t("mainDrawer.listItems.quickAnswers")}
         icon={<QuestionAnswerOutlined />}
-      />
-      <ListItemLink
-        to="/tags"
-        primary={i18n.t("mainDrawer.listItems.tags")}
-        icon={<LocalOffer />}
       />
       <Can
         role={user.profile}

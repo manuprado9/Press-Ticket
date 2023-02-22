@@ -47,40 +47,40 @@ const Api = () => {
     return (
         <div className={classes.root}>
             <Container>
-                <h2>Documentação para envio de mensagens</h2>
+                <h2>Documentación para el envío de mensajes</h2>
 
                 <h2 className={classes.color}>Métodos de Envio</h2>
 
-                <p className={classes.text}>1. Mensagens de Texto</p>
-                <p className={classes.text}>2. Mensagens de Mídia</p>
+                <p className={classes.text}>1. Mensajes de Texto</p>
+                <p className={classes.text}>2. Mensajes Multimedia</p>
 
-                <h2 className={classes.color}>Instruções</h2>
-                <p><b>Observações Importantes</b></p>
+                <h2 className={classes.color}>Instrucciones</h2>
+                <p><b>Observaciones importantes</b></p>
                 <ul>
-                    <li className={classes.text}>Para pegar o token da API, vá em configurações que seu token estará la, sem ele não será possivel enviar mensagens.</li>
-                    <li className={classes.text}>O número para envio não deve ter mascara ou caracteres especiais e deve ser composto por:</li>
+                    <li className={classes.text}>Para tomar el token de API, vaya a la configuración de que su token estará allí, sin él no será posible enviar mensajes.</li>
+                    <li className={classes.text}>El número de envío no debe tener máscaras ni caracteres especiales y debe estar compuesto por:</li>
                     <br />
                     <ol>
                         <ul>
-                            <li className={classes.text}>Código do pais - Ex: 55 (Brasil)</li>
-                            <li className={classes.text}>DDD</li>
+                            <li className={classes.text}>Código del país - Ej: 54 (Argentina)</li>
+                            <li className={classes.text}>Prefijo</li>
                             <li className={classes.text}>Número</li>
                         </ul>
                     </ol>
                 </ul>
-                <h2 className={classes.color}>1. Mensagens de Texto</h2>
-                <p>Seguem abaixo lista de informações necessárias para envio das mensagens de texto:</p>
+                <h2 className={classes.color}>1. Mensajes de Texto</h2>
+                <p>A continuación se muestra una lista de información necesaria para enviar mensajes de texto:</p>
                 <p className={classes.textP}><b>URL: </b>{process.env.REACT_APP_BACKEND_URL}/api/messages/send</p>
                 <p className={classes.textP}><b>Metódo: </b>POST</p>
                 <p className={classes.textP}><b>Headers: </b>Authorization: Bearer (token) e Content-Type application/json</p>
                 <p className={classes.textP}><b>Body: </b>"number": "5599999999999", "body": "Enviado via api"</p>
 
-                <h2 className={classes.color}>2. Mensagens de Mídia</h2>
-                <p>Seguem abaixo lista de informações necessárias para envio de midias:</p>
+                <h2 className={classes.color}>2. Mensajes Multimedias</h2>
+                <p>A continuación se muestra una lista de información necesaria para enviar un mensaje con contenido multimedia:</p>
                 <p className={classes.textP}><b>URL: </b>{process.env.REACT_APP_BACKEND_URL}/api/messages/send</p>
                 <p className={classes.textP}><b>Metódo: </b>POST</p>
                 <p className={classes.textP}><b>Headers: </b>Authorization: Bearer (token) e Content-Type multipart/form-data</p>
-                <p className={classes.textP}><b>Body: </b>"number": "5599999999999", "medias": "aqui vai sua midia", "body": "Enviado via api"</p>
+                <p className={classes.textP}><b>Body: </b>"number": "5599999999999", "medias": "Aquí están tus medios", "body": "Enviado via api"</p>
             </Container>
         </div>
     );

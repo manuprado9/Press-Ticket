@@ -18,7 +18,7 @@ import MoodIcon from "@material-ui/icons/Mood";
 import SendIcon from "@material-ui/icons/Send";
 import CancelIcon from "@material-ui/icons/Cancel";
 import ClearIcon from "@material-ui/icons/Clear";
-import MicIcon from "@material-ui/icons/Mic";
+//import MicIcon from "@material-ui/icons/Mic";
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import {
@@ -236,6 +236,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 const MessageInput = ({ ticketStatus }) => {
   const classes = useStyles();
   const { ticketId } = useParams();
@@ -370,19 +371,6 @@ const MessageInput = ({ ticketStatus }) => {
     setReplyingMessage(null);
   };
 
-  const handleStartRecording = async () => {
-    setLoading(true);
-    try {
-      await navigator.mediaDevices.getUserMedia({ audio: true });
-      await Mp3Recorder.start();
-      setRecording(true);
-      setLoading(false);
-    } catch (err) {
-      toastError(err);
-      setLoading(false);
-    }
-  };
-
   const handleLoadQuickAnswer = async (value) => {
     if (value && value.indexOf("/") === 0) {
       try {
@@ -464,7 +452,7 @@ const MessageInput = ({ ticketStatus }) => {
           </div>
         </div>
         <IconButton
-          aria-label="showRecorder"
+          aria-label="null"
           component="span"
           disabled={loading || ticketStatus !== "open"}
           onClick={() => setReplyingMessage(null)}
@@ -775,12 +763,12 @@ const MessageInput = ({ ticketStatus }) => {
             </div>
           ) : (
             <IconButton
-              aria-label="showRecorder"
+              aria-label="null"
               component="span"
               disabled={loading || ticketStatus !== "open"}
-              onClick={handleStartRecording}
+              onClick={null}
             >
-              <MicIcon className={classes.sendMessageIcons} />
+              <SendIcon className={classes.sendMessageIcons} />
             </IconButton>
           )}
         </div>

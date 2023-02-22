@@ -4,12 +4,12 @@ const messages = {
       signup: {
         title: "Registrarse",
         toasts: {
-          success: "¡El asistente se creó correctamente! ¡Inicia sesión!",
-          fail: "Error al crear el asistente. Verifique los datos ingresados.",
+          success: "¡El usuaio se creó correctamente! ¡Inicia Sesión!",
+          fail: "Error al crear el usuario. Verifique los datos ingresados.",
         },
         form: {
           name: "Nombre",
-          email: "Correo electrónico",
+          email: "E-mail",
           password: "Contraseña",
         },
         buttons: {
@@ -17,10 +17,10 @@ const messages = {
           login: "¿Ya tienes una cuenta? ¡Inicia sesión!",
         },
       },
-      Login: {
-        title: "Iniciar sesión ahora",
+      login: {
+        title: "",
         form: {
-          email: "Ingrese correo electrónico",
+          email: "Ingrese E-mail",
           password: "Ingrese su contraseña",
         },
         buttons: {
@@ -34,41 +34,41 @@ const messages = {
         },
       },
       messageVariablesPicker: {
-        label: "Variables disponibles",
+        label: "Tipos Disponibles",
         vars: {
-          contactName: "Nombre",
-          user: "Asistente",
-          greeting: "Saludo",
+          contactName: "Nombre de Mi Linea",
+          user: "Nombre de Usuario",
+          greeting: "Buenos Dias/Tarde/Noche",
           protocolNumber: "Protocolo",
-          date: "Data",
+          date: "Dia",
           hour: "Hora",
-          ticket_id: "Ticked ID",
+          ticket_id: "Numero De Chat",
           queue: "Sector",
-          connection: "Conexión"
+          connection: "Nombre de Linea de Whatsapp"
         }
       },
       dashboard: {
         charts: {
           perDay: {
-            title: "Boletos de hoy:",
+            title: "Chats de Hoy:",
           },
         },
         messages: {
           inAttendance: {
-            title: "En asistencia"
+            title: "Respondiendo"
           },
           waiting: {
             title: "Esperando"
           },
           closed: {
-            title: "Resuelto"
+            title: "Finalizados"
           }
         }
       },
       connections: {
-        title: "Conexiones",
+        title: "Lineas",
         toasts: {
-          deleted: "¡La conexión de WhatsApp se eliminó correctamente!",
+          deleted: "¡La linea de WhatsApp se eliminó correctamente!",
         },
         confirmationModal: {
           deleteTitle: "Eliminar",
@@ -78,7 +78,7 @@ const messages = {
         },
         buttons: {
           add: "Agregar WhatsApp",
-          disconnect: "desconectar",
+          disconnect: "Desconectar",
           tryAgain: "Intentar de nuevo",
           qrcode: "CÓDIGO QR",
           newQr: "Nuevo CÓDIGO QR",
@@ -94,7 +94,7 @@ const messages = {
             content: "Haga clic en el botón 'CÓDIGO QR' y escanee el código QR con su teléfono celular para iniciar sesión.",
           },
           connected: {
-            title: "¡Conexión establecida!",
+            title: "¡Conexión Establecida!",
           },
           timeout: {
             title: "Se perdió la conexión con el celular",
@@ -102,13 +102,13 @@ const messages = {
           },
         },
         table: {
-          id: "ID de instancia",
+          id: "ID",
           name: "Nombre",
           number: "Número",
           status: "Estado",
-          lastUpdate: "Última actualización",
+          lastUpdate: "Última Actualización",
           default: "Predeterminado",
-          actions: "Acciones",
+          actions: "Opciones",
           session: "Sesión",
         },
       },
@@ -120,8 +120,8 @@ const messages = {
         form: {
           name: "Nombre",
           default: "Predeterminado",
-          display: "Mostrar hora del sector",
-          farewellMessage: "Mensaje de despedida"
+          display: "Mostrar hora del Sector",
+          farewellMessage: "Mensaje de Despedida"
         },
         buttons: {
           okAdd: "Agregar",
@@ -144,8 +144,8 @@ const messages = {
           deleteTitle: "Eliminar",
           deleteAllTitle: "Borrar todo",
           importTitle: "Importar contactos",
-          deleteMessage: "¿Está seguro de que desea eliminar este contacto? Se perderán todos los tickets relacionados.",
-          deleteAllMessage: "¿Está seguro de que desea eliminar todos los contactos? Se perderán todos los tickets relacionados.",
+          deleteMessage: "¿Está seguro de que desea eliminar este contacto? Se perderán todos los chats relacionados.",
+          deleteAllMessage: "¿Está seguro de que desea eliminar todos los contactos? Se perderán todos los chats relacionados.",
           importMessage: "¿Quieres importar todos los contactos del teléfono?",
         },
         buttons: {
@@ -157,8 +157,8 @@ const messages = {
         table: {
           name: "Nombre",
           whatsapp: "WhatsApp",
-          email: "Correo electrónico",
-          actions: "Acciones",
+          email: "E-mail",
+          actions: "Opciones",
         },
       },
       contactModal: {
@@ -168,15 +168,15 @@ const messages = {
         },
         form: {
           mainInfo: "Datos de contacto",
-          extraInfo: "Información adicional",
+          extraInfo: "Información Adicional",
           name: "Nombre",
           number: "Número de WhatsApp",
-          email: "Correo electrónico",
+          email: "E-mail",
           extraName: "Nombre de campo",
-          extraValue: "Valor",
+          extraValue: "Introduzca Texto/Numeros",
         },
         buttons: {
-          addExtraInfo: "Añadir información",
+          addExtraInfo: "Añadir Información",
           okAdd: "Agregar",
           okEdit: "Guardar",
           cancel: "Cancelar",
@@ -185,12 +185,12 @@ const messages = {
       },
       quickAnswersModal: {
         title: {
-          add: "Agregar respuesta rápida",
-          edit: "Editar respuesta rápida",
+          add: "Agregar Respuesta Rápida",
+          edit: "Editar Respuesta Rápida",
         },
         form: {
           shortcut: "Atajo",
-          message: "Respuesta rápida",
+          message: "Respuesta Rápida",
         },
         buttons: {
           okAdd: "Agregar",
@@ -204,8 +204,8 @@ const messages = {
         table: {
           name: "Etiquetas",
           color: "Color",
-          contacts: "Contactos",
-          actions: "Acción"
+          contacts: "Cantidad de Contactos",
+          actions: "Opciones"
         },
         toasts: {
           deleted: "¡Etiqueta eliminada con éxito!",
@@ -224,8 +224,8 @@ const messages = {
       },
       tagModal: {
         title: {
-          add: "Agregar etiqueta",
-          edit: "Editar etiqueta",
+          add: "Agregar Etiqueta",
+          edit: "Editar Etiqueta",
         },
         buttons: {
           okAdd: "Guardar",
@@ -233,8 +233,8 @@ const messages = {
           cancel: "Cancelar",
         },
         form: {
-          name: "Nombre de la etiqueta",
-          color: "Color de la etiqueta"
+          name: "Nombre De La Etiqueta",
+          color: "Color De La Etiqueta"
         },
         success: "¡Etiqueta guardada con éxito!",
       },
@@ -248,7 +248,7 @@ const messages = {
         },
         form: {
           name: "Nombre",
-          color: "Mensaje de saludo",
+          color: "Color del sector",
           greetingMessage: "Apertura",
           startWork: "Apertura",
           endWork: "Cierre",
@@ -262,17 +262,17 @@ const messages = {
       },
       userModal: {
         title: {
-          add: "Agregar asistente",
-          edit: "Editar asistente",
+          add: "Agregar Usuario",
+          edit: "Editar Usuario",
         },
         form: {
           name: "Nombre",
-          email: "Correo electrónico",
+          email: "E-mail",
           password: "Contraseña",
           profile: "Perfil",
           admin: "Administrador",
           whatsapp: "Conexión estándar",
-          asistente: "Asistente",
+          user:  "Usuario",
           startWork: "Inicio",
           endWork: "Finalizar"
         },
@@ -281,7 +281,7 @@ const messages = {
           okEdit: "Guardar",
           cancel: "Cancelar",
         },
-        success: "El asistente guardó con éxito.",
+        success: "El usuario guardó con éxito.",
       },
       chat: {
         noTicketMessage: "Seleccione un ticket para comenzar a chatear.",
@@ -309,7 +309,7 @@ const messages = {
         },
         tabs: {
           open: { title: "Bandeja de entrada" },
-          closed: { title: "Resuelto" },
+          closed: { title: "Finalizado" },
           search: { title: "Buscar" },
         },
         search: {
@@ -321,11 +321,11 @@ const messages = {
       },
       transferTicketModal: {
         title: "Boleto de transferencia",
-        fieldLabel: "Escriba para obtener asistentes",
+        fieldLabel: "Escriba para obtener usuarios",
         fieldConnectionLabel: "Transferir a conexión",
         fieldQueueLabel: "Transferir a Sector",
         fieldConnectionPlaceholder: "Seleccione una conexión",
-        noOptions: "No se encontró ningún asistente con ese nombre",
+        noOptions: "No se encontró ningún usuario con ese nombre",
         buttons: {
           ok: "Transferir",
           cancel: "Cancelar",
@@ -340,10 +340,10 @@ const messages = {
         items: {
           queueless: "Sin sector",
           accept: "Aceptar",
-          spy: "Espía",
-          close: "Cerca",
+          spy: "Ver",
+          close: "Finalizar",
           reopen: "Reabrir",
-          return: "Mover a espera"
+          return: "Poner en Espera"
         },
         buttons: {
           accept: "Responder",
@@ -358,7 +358,7 @@ const messages = {
       },
       newTicketModal: {
         title: "Crear ticket",
-        fieldLabel: "Entrar para buscar contacto",
+        fieldLabel: "Escribir para buscar contacto",
         add: "Agregar",
         buttons: {
           ok: "Guardar",
@@ -371,11 +371,11 @@ const messages = {
           connections: "Conexiones",
           tickets: "Boletos",
           contacts: "Contactos",
-          quickAnswers: "Respuestas rápidas",
-          etiquetas: "Etiquetas",
+          quickAnswers: "Respuestas Rápidas",
+          tags: "Tags",
           queues: "Sectores",
           administration: "Administración",
-          users: "Asistentes",
+          users: "Usuarios",
           settings: "Configuración",
           sendMsg: "Enviando Mensajes",
           sendMedia: "Enviando medios",
@@ -383,12 +383,12 @@ const messages = {
           apidocs: "Documentación",
           apititle: "API",
           apikey: "Clave API",
-          token: "Ficha"
+          token: "Token"
         },
         appBar: {
           user: {
             profile: "Perfil",
-            logout: "Cerrar sesión",
+            logout: "Salir",
           },
         },
       },
@@ -404,7 +404,7 @@ const messages = {
           name: "Nombre",
           color: "Color",
           greeting: "Mensaje de saludo",
-          actions: "Acciones",
+          actions: "Opciones",
           startWork: "Apertura",
           endWork: "Cierre",
         },
@@ -420,15 +420,15 @@ const messages = {
         inputLabel: "Sectores",
       },
       quickAnswers: {
-        title: "Respuestas rápidas",
+        title: "Respuestas Rápidas",
         table: {
           shortcut: "Atajo",
           message: "Respuesta rápida",
-          actions: "Acciones",
+          actions: "Opciones",
         },
         buttons: {
-          add: "Agregar respuesta rápida",
-          deletedAll: "Eliminar todas las respuestas rápidas",
+          add: "Agregar Respuesta Rápida",
+          deleteAll: "Eliminar Todas Las Respuestas Rápidas",
         },
         toasts: {
           deleted: "Respuesta rápida eliminada con éxito.",
@@ -437,31 +437,31 @@ const messages = {
         searchPlaceholder: "Buscar...",
         confirmationModal: {
           deleteTitle: "¿Está seguro de que desea eliminar esta respuesta rápida: ",
-          deletedAll: "¿Está seguro de que desea eliminar todas las respuestas rápidas?",
-          deleteMessage: "Esta acción no se puede revertir.",
-          deleteAllMessage: "Esta acción no se puede revertir.",
+          deletedAllTitle: "¿Está seguro de que desea eliminar todas las respuestas rápidas?",
+          deleteMessage: "¿Estás seguro? Esta acción no se puede revertir.",
+          deleteAllMessage: "¿Estás seguro? Esta acción no se puede revertir.",
         },
       },
       users: {
-        title: "Asistentes",
+        title: "Usuarios",
         table: {
           name: "Nombre",
-          email: "Correo electrónico",
+          email: "E-mail",
           profile: "Perfil",
           whatsapp: "Conexión estándar",
           startWork: "Hora de inicio",
           endWork: "Tiempo de finalización",
-          acciones: "Acciones",
+          actions: "Opciones",
         },
         buttons: {
-          add: "Agregar asistente",
+          add: "Agregar Usuario",
         },
         toasts: {
-          deleted: "asistente eliminado con éxito.",
+          deleted: "Usuario eliminado con éxito.",
         },
         confirmationModal: {
           deleteTitle: "Eliminar",
-          deleteMessage: "Se perderán todos los datos del asistente. Los tickets abiertos para este asistente se moverán a espera.",
+          deleteMessage: "Se perderán todos los datos del usuario. Los tickets abiertos para este usuario se moverán a espera.",
         },
       },
       settings: {
@@ -469,8 +469,8 @@ const messages = {
         title: "Configuración",
         settings: {
           userCreation: {
-            name: "Creación de asistente",
-            note: "Permitir la creación de asistentes",
+            name: "Creación de usuario",
+            note: "Permitir la creación de usuarios",
             options: {
               enabled: "Habilitado",
               disabled: "Deshabilitado",
@@ -528,19 +528,24 @@ const messages = {
             name: "Crear nuevo ticket después",
             note: "Seleccione el tiempo que tardará en abrir un nuevo ticket si el cliente lo contacta nuevamente",
             options: {
-              "10": "10 segundos",
-              "30": "30 segundos",
-              "60": "1 minuto",
-              "300": "5 minutos",
-              "1800": "30 minutos",
-              "3600": "1 hora",
-              "7200": "2 horas",
-              "21600": "6 horas",
-              "43200": "12 horas",
-              "86400": "24 horas",
-              "604800": "7 días",
-              "1296000": "15 días",
-              "2592000": "30 días",
+              "10": "10 Segundos",
+              "30": "30 Segundos",
+              "60": "1 Minuto",
+              "300": "5 Minutos",
+              "1800": "30 Minutos",
+              "3600": "1 Hora",
+              "7200": "2 Horas",
+              "21600": "6 Horas",
+              "43200": "12 Horas",
+              "86400": "24 Horas",
+              "604800": "7 Días",
+              "1296000": "15 Días",
+              "2592000": "30 Días",
+              "7862400": "3 Meses",
+              "15552000": "6 Meses",
+              "31536000": "1 Año",
+              "126144000": "4 Años",
+              "31536000000000": "Para Siempre (100 Años)",              
             },
           },
         },
@@ -549,17 +554,17 @@ const messages = {
         header: {
           assignedTo: "Asignado:",
           buttons: {
-            return: "Volver",
-            resolve: "Resolver",
+            return: "Poner en Espera",
+            resolve: "Finalizar",
             reopen: "Reabrir",
             accept: "Aceptar",
           },
         },
       },
       messagesInput: {
-        placeholderOpen: "Ingrese un mensaje",
-        placeholderClosed: "Reabrir o aceptar este ticket para enviar un mensaje.",
-        signMessage: "Suscribirse",
+        placeholderOpen: "Empieze a escribir 😎",
+        placeholderClosed: "Tiene que Reabrir o aceptar este ticket para poder enviar un mensaje.",
+        signMessage: "Firmar",
       },
       contactDrawer: {
         header: "Datos de contacto",
@@ -591,12 +596,12 @@ const messages = {
           cancel: "Cancelar",
         },
       },
-      tablegeoOptionsMenu: {
+      messageOptionsMenu: {
         delete: "Eliminar",
         reply: "Responder",
         confirmationModal: {
           title: "¿Eliminar mensaje?",
-          message: "Esta acción no se puede revertir.",
+          message: "¿Estás seguro? Esta acción no se puede revertir.",
         },
       },
       backendErrors: {
@@ -611,22 +616,23 @@ const messages = {
         ERR_DELETE_WAPP_MSG: "No se pudo eliminar el mensaje de WhatsApp.",
         ERR_OTHER_OPEN_TICKET: "Ya hay un ticket abierto para este contacto.",
         ERR_SESSION_EXPIRED: "Sesión caducada. Inicie sesión.",
-        ERR_USER_CREATION_DISABLED: "La creación de asistentes ha sido deshabilitada por el administrador.",
+        ERR_USER_CREATION_DISABLED: "La creación de usuarios ha sido deshabilitada por el administrador.",
         ERR_NO_PERMISSION: "No tienes permiso para acceder a este recurso.",
         ERR_DUPLICATED_CONTACT: "Ya existe un contacto con este número.",
         ERR_NO_SETTING_FOUND: "No se encontraron configuraciones con esta ID.",
         ERR_NO_CONTACT_FOUND: "No se encontró ningún contacto con esta ID.",
         ERR_NO_TICKET_FOUND: "No se encontraron boletos con esta ID.",
-        ERR_NO_USER_FOUND: "No se encontró ningún asistente con esta ID.",
+        ERR_NO_USER_FOUND: "No se encontró ningún usuarios con esta ID.",
         ERR_NO_WAPP_FOUND: "No se encontró WhatsApp con este ID.",
         ERR_CREATING_MESSAGE: "Error al crear el mensaje en la base de datos.",
         ERR_CREATING_TICKET: "Error al crear el ticket en la base de datos.",
         ERR_FETCH_WAPP_MSG: "Error al obtener el mensaje en WhatsApp, puede ser demasiado antiguo.",
         ERR_QUEUE_COLOR_ALREADY_EXISTS: "Este color ya está en uso, elige otro.",
         ERR_WAPP_GREETING_REQUIRED: "El mensaje de saludo es obligatorio cuando hay más de un Sector.",
-        ERR_USER_CREATION_COUNT: "Límite de asistentes alcanzado, comuníquese con soporte para cambiar",
+        ERR_USER_CREATION_COUNT: "Límite de usuarios alcanzado, comuníquese con soporte para cambiar",
         ERR_CONNECTION_CREATION_COUNT: "Límite de conexión alcanzado, comuníquese con soporte para cambiar.",
         ERR_NO_TAG_FOUND: "Etiqueta no encontrada.",
+        ERR_OUT_OF_HOURS: "Fuera del Horario Labaroral!",
       },
     },
   },

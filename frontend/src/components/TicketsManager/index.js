@@ -191,6 +191,7 @@ const TicketsManager = () => {
             icon={<HourglassEmptyRounded />}
             label={
               <Badge
+              overlap="rectangular"
                 className={classes.badge}
                 badgeContent={pendingCount}
                 color="secondary"

@@ -101,7 +101,7 @@ const MainListItems = (props) => {
     <div onClick={drawerClose}>
       <ListItemLink
         to="/"
-        primary="Dashboard"
+        primary={i18n.t("Dashboard")}
         icon={<DashboardOutlined />}
       />
       <ListItemLink
@@ -137,7 +137,7 @@ const MainListItems = (props) => {
               to="/connections"
               primary={i18n.t("mainDrawer.listItems.connections")}
               icon={
-                <Badge badgeContent={connectionWarning ? "!" : 0} color="error">
+                <Badge overlap="rectangular" badgeContent={connectionWarning ? "!" : 0} color="error">
                   <SyncAlt />
                 </Badge>
               }

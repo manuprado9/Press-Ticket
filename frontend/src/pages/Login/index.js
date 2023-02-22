@@ -21,6 +21,7 @@ import { i18n } from "../../translate/i18n";
 import { AuthContext } from "../../context/Auth/AuthContext";
 import { system } from "../../config.json";
 import logo from '../../assets/logo.png';
+import background from '../../assets/background.jpg';
 
 const Copyright = () => {
   return (
@@ -69,6 +70,17 @@ const Login = () => {
   };
 
   return (
+    <div
+      style={{ backgroundImage: `url(${background})`,
+        minHeight: '100vh', 
+        backgroundPosition: 'center', 
+        backgroundSize: 'cover', 
+        backgroundRepeat: 'no-repeat',
+        margin: 'auto',
+        display: 'flex',
+    }}
+      >
+    
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
@@ -133,14 +145,17 @@ const Login = () => {
                 to="/signup"
               >
                 {i18n.t("login.buttons.register")}
-              </Link>
+                </Link>
+              </Grid>
             </Grid>
-          </Grid>
-        </form>
-      </div>
-      <Box mt={8}><Copyright /></Box>
-    </Container>
+          </form>
+        </div>
+        <Box mt={8}>
+          <Copyright />
+        </Box>
+      </Container>
+    </div>
   );
-};
+}
 
 export default Login;

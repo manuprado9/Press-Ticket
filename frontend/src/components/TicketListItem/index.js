@@ -309,6 +309,7 @@ const TicketListItem = ({ ticket }) => {
 							</Typography>
 
 							<Badge
+								overlap="rectangular"
 								className={classes.newMessagesCount}
 								badgeContent={ticket.unreadMessages}
 								classes={{

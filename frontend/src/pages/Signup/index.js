@@ -30,6 +30,7 @@ import toastError from "../../errors/toastError";
 
 import { system } from "../../config.json";
 import logo from '../../assets/logo.png';
+import background from '../../assets/fondo.jpg';
 
 const Copyright = () => {
 	return (
@@ -87,7 +88,17 @@ const SignUp = () => {
 		}
 	};
 
-	return (
+  return (
+    <div
+      style={{ backgroundImage: `url(${background})`,
+        minHeight: '100vh', 
+        backgroundPosition: 'center', 
+        backgroundSize: 'cover', 
+        backgroundRepeat: 'no-repeat',
+        margin: 'auto',
+        display: 'flex',
+    }}
+      >
 		<Container component="main" maxWidth="xs">
 			<CssBaseline />
 			<div className={classes.paper}>
@@ -189,10 +200,12 @@ const SignUp = () => {
 						</Form>
 					)}
 				</Formik>
-			</div>
-			<Box mt={5}><Copyright /></Box>
-		</Container>
-	);
-};
-
+        </div>
+        <Box mt={5}>
+          <Copyright />
+        </Box>
+      </Container>
+    </div>
+  );
+}
 export default SignUp;

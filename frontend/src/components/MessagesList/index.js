@@ -216,8 +216,9 @@ const useStyles = makeStyles((theme) => ({
     borderBottomRightRadius: 8,
   },
 
-  timestamp: {
+    timestamp: {
     fontSize: 11,
+    padding:5,
     position: "absolute",
     bottom: 0,
     right: 5,
@@ -330,7 +331,7 @@ const reducer = (state, action) => {
     const messageIndex = state.findIndex((m) => m.id === messageToUpdate.id);
 
     if (messageToUpdate.isDeleted === true) {
-      //toast.info(`Mensagem apagada: ${messageToUpdate.body}  `,{autoClose: false});
+      //toast.info(`Mensaje Borrado: ${messageToUpdate.body}  `,{autoClose: false});
       toast.info(<ToastDisplay
         body={messageToUpdate.body}
       >

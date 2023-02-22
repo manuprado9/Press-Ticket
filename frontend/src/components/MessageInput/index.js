@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
 import "emoji-mart/css/emoji-mart.css";
+import { Can } from "../Can";
 import { useParams } from "react-router-dom";
 import { Picker } from "emoji-mart";
 import MicRecorder from "mic-recorder-to-mp3";
@@ -274,6 +275,13 @@ const MessageInput = ({ ticketStatus }) => {
     }, 10000);
     // eslint-disable-next-line
   }, [onDragEnter === true]);
+
+  useEffect(() => {
+    if (user.profile.toUpperCase() === "ADMIN") {
+      setSignMessage(true);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const handleChangeInput = (e) => {
     setInputMessage(e.target.value);
@@ -588,6 +596,10 @@ const MessageInput = ({ ticketStatus }) => {
                 <AttachFileIcon className={classes.sendMessageIcons} />
               </IconButton>
             </label>
+        <Can
+          role={user.profile}
+          perform="sign-message:disable"
+          yes={() => (
             <FormControlLabel
               style={{ marginRight: 7, color: "gray" }}
               label={i18n.t("messagesInput.signMessage")}
@@ -601,9 +613,11 @@ const MessageInput = ({ ticketStatus }) => {
                   }}
                   name="showAllTickets"
                   color="primary"
-                />
-              }
-            />
+                    />
+                  }
+                    />
+                )}
+                    />
           </Hidden>
           <Hidden only={["md", "lg", "xl"]}>
             <IconButton
@@ -650,6 +664,10 @@ const MessageInput = ({ ticketStatus }) => {
                 </label>
               </MenuItem>
               <MenuItem onClick={handleMenuItemClick}>
+          <Can
+               role={user.profile}
+               perform="sign-message:disable"
+               yes={() => (
                 <FormControlLabel
                   style={{ marginRight: 7, color: "gray" }}
                   label={i18n.t("messagesInput.signMessage")}
@@ -665,7 +683,9 @@ const MessageInput = ({ ticketStatus }) => {
                       color="primary"
                     />
                   }
-                />
+                    />
+                )}
+                    />
               </MenuItem>
             </Menu>
           </Hidden>
